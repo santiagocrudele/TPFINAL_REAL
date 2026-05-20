@@ -48,8 +48,24 @@ El objetivo de este proyecto es proveer un módulo de cálculos matemáticos pre
 Para el diseño de este sistema, se implementó el siguiente modelo orientado a objetos, donde se puede observar la interacción entre la interfaz y el motor matemático:
 
 > *[Nota para vos: Subí la foto de tu diagrama de clases o casos de uso a tu repo]*
-> ![Diagrama UML](./assets/diagrama-uml.png)
-
+> ```mermaid
+classDiagram
+    class CalculatorController {
+        +add(a: Number, b: Number) Number
+        +subtract(a: Number, b: Number) Number
+        +divide(a: Number, b: Number) Number
+        +calcularDescuento(monto: Number, esClienteVIP: Boolean) Number
+    }
+    
+    class UI {
+        +ingresarDatos()
+        +mostrarResultado()
+        +mostrarError()
+    }
+    
+    UI --> CalculatorController : "Envía datos"
+    CalculatorController --> UI : "Retorna resultado/error"
+```
 ---
 
 ## 🛠️ Tecnologías Utilizadas
