@@ -43,12 +43,8 @@ El objetivo de este proyecto es proveer un módulo de cálculos matemáticos pre
 
 ---
 
-## 📊 Artefactos UML
-
-Para el diseño de este sistema, se implementó el siguiente modelo orientado a objetos, donde se puede observar la interacción entre la interfaz y el motor matemático:
-
-> *[Nota para vos: Subí la foto de tu diagrama de clases o casos de uso a tu repo]*
 > ## 📊 Artefactos UML
+> *[Nota para vos: Subí la foto de tu diagrama de clases o casos de uso a tu repo]*
 
 Para el diseño de este sistema, se implementó el siguiente modelo orientado a objetos, donde se puede observar la interacción entre la interfaz y el motor matemático:
 
