@@ -86,3 +86,20 @@ classDiagram
    npm start
 
    npm test[README.md](https://github.com/user-attachments/files/28075373/README.md)
+
+   ### 🧪 Pruebas Unitarias - Manejo de Errores en el Login
+
+Como parte del aseguramiento de calidad del software, se implementaron pruebas unitarias en el `LoginComponent` utilizando **Karma y Jasmine**. Una de las pruebas clave verifica que el sistema bloquee correctamente el acceso frente a intentos de ingreso con credenciales inválidas.
+
+**Caso de Prueba Documentado:**
+Se simula el escenario donde un usuario intenta ingresar a una cuenta existente pero equivocando su clave.
+
+* **Usuario ingresado:** `admin`
+* **Contraseña ingresada:** `12345` *(Nota: la contraseña real es 1234)*
+* **Comportamiento esperado y validado:**
+  1. El servicio de autenticación (`AuthService`) rechaza la solicitud (retorna `false`).
+  2. Se previene la navegación hacia el panel principal (`/code`).
+  3. El sistema muestra por pantalla el mensaje de alerta: ⚠️ *"Usuario o contraseña incorrectos"*.
+  4. Por seguridad, el campo de la contraseña se blanquea automáticamente para un nuevo intento.
+
+Esta prueba garantiza que el sistema sea seguro y no permita filtraciones a la aplicación si las credenciales no coinciden exactamente con la base de datos.
